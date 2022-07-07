@@ -11,4 +11,10 @@ public class Home {
         System.out.println(" index method executed!");
         return("index");
     }
+
+    @GetMapping("/contact")
+    public String contact(){
+        System.out.println("contact method executed");
+        return("contact");
+    }
 }

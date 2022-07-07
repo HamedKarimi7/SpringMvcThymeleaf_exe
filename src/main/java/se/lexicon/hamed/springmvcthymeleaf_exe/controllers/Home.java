@@ -17,4 +17,5 @@ public class Home {
         System.out.println("contact method executed");
         return("contact");
     }
+
 }

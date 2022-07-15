@@ -1,11 +1,13 @@
 package se.lexicon.hamed.springmvcthymeleaf_exe.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -24,10 +26,16 @@ public class HomeController {
     }
 
     @PostMapping("/contact")
-    public String contact(@RequestParam("email") String email) {
+    public String contact(@RequestParam("email") String email){
         System.out.println("Email:" + email);
         contacts.add(email);
-        return "redirect :/contact";
+        return "redirect:/contacts";
+    }
+
+    @GetMapping("/contacts")
+    public String contacts(Model model){
+        model.addAttribute("contacts", contacts );
+        return("contacts");
     }
 
 }

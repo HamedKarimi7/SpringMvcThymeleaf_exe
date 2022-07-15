@@ -11,12 +11,12 @@
 
 </head>
 <body>
-<div class="container" style="text-align: center">
-<h3 style="text-align: center">Contact Form</h3>
-<form th:action="@{/contact}" th:method="post">
-    Email : <input th:name="Email" type="text"/><br/>
+ <div class="container" style="text-align: center">
+ <h3 style="text-align: center">Contact Form</h3>
+<form th:action="@{/contact}" method="post">
+    Email : <input th:name="email" type="text"/><br/>
     <button type="submit">Submit</button>
-</div>
 </form>
+</div>
 </body>
 </html>
